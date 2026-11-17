@@ -12,6 +12,10 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('./src/components/Button.vue')['default']
+    HamburgerMenu: typeof import('./src/components/HamburgerMenu.vue')['default']
+    IUilBars: typeof import('~icons/uil/bars')['default']
+    IUilClose: typeof import('~icons/uil/close')['default']
+    IUilMultiply: typeof import('~icons/uil/multiply')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

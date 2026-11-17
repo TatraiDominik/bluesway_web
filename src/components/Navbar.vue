@@ -10,12 +10,11 @@ interface NavLink {
   path: string
 }
 
-const navLinks = ref<NavLink[]>([  
-
+const navLinks = ref<NavLink[]>([
   {
     path: '/rolunk',
     name: 'Rólunk',
-  },  
+  },
   {
     path: '/koncertek',
     name: 'Koncertek',
@@ -44,8 +43,9 @@ const navLinks = ref<NavLink[]>([
       :key="navLink.path"
       :to="navLink.path"
       class="flex justify-center content-center items-center p-4 border-2 border-zinc-100 text-xl font-normal w-50"
-      :class="route.path === navLink.path ? 'bg-zinc-100 text-zinc-900 ' : 'bg-zinc-900 text-zinc-200'"
-      
+      :class="
+        route.path === navLink.path ? 'bg-zinc-100 text-zinc-900 ' : 'bg-zinc-900 text-zinc-200'
+      "
     >
       {{ navLink.name }}
     </RouterLink>
