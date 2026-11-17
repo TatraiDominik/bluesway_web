@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    Landing
+    <h3>landing</h3>
   </main>
 </template>
