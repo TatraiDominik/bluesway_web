@@ -63,7 +63,7 @@ onMounted(() => {
   </div>
 
   <section v-else class="flex flex-col justify-end content-start items-end p-4 gap-4 bg-zinc-900 w-full">
-    <div @click="setOpened(false)" class="flex flex-row justify-center content-center items-center p-2 text-zinc-300 border-2 border-zinc-300">
+    <div @click="setOpened(false)" class="flex flex-row justify-center content-center items-center p-2 gap-2 text-zinc-300 border-2 border-zinc-300">
       <i-uil-multiply class="text-2xl"></i-uil-multiply>
       <span class="text-xl">Menü bezárása</span>
     </div>
