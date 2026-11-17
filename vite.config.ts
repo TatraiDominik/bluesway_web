@@ -6,6 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import MotionResolver from 'motion-v/resolver'
 import Components from 'unplugin-vue-components/vite';
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,11 +15,12 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     tailwindcss(),
+    Icons({ compiler: 'vue3' }),
     Components({
       dts: true,
       resolvers: [
         MotionResolver(),
-
+        IconsResolver()
       ],
     })
   ],
