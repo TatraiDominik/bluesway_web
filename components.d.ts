@@ -15,6 +15,7 @@ declare module 'vue' {
     HamburgerMenu: typeof import('./src/components/HamburgerMenu.vue')['default']
     IBrandicoFacebook: typeof import('~icons/brandico/facebook')['default']
     ISolarArrowRightDownLinear: typeof import('~icons/solar/arrow-right-down-linear')['default']
+    ISolarArrowRightUpLinear: typeof import('~icons/solar/arrow-right-up-linear')['default']
     IUilBars: typeof import('~icons/uil/bars')['default']
     IUilMultiply: typeof import('~icons/uil/multiply')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
