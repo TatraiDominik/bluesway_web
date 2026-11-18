@@ -20,7 +20,9 @@
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
+    "@iconify-json/brandico": "^1.2.3",
     "@iconify-json/carbon": "^1.2.30",
+    "@iconify-json/solar": "^1.2.16",
     "@iconify-json/uil": "^1.2.3",
     "@tsconfig/node24": "^24.0.5",
     "@types/node": "^24.13.4",

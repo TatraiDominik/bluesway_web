@@ -13,6 +13,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('./src/components/Button.vue')['default']
     HamburgerMenu: typeof import('./src/components/HamburgerMenu.vue')['default']
+    'IBrandico:facebook': typeof import('~icons/brandico/facebook')['default']
+    IBrandicoFacebook: typeof import('~icons/brandico/facebook')['default']
+    'IFa7Brands:facebookF': typeof import('~icons/fa7-brands/facebook-f')['default']
+    ISolarArrowRightDownLinear: typeof import('~icons/solar/arrow-right-down-linear')['default']
     IUilBars: typeof import('~icons/uil/bars')['default']
     IUilClose: typeof import('~icons/uil/close')['default']
     IUilMultiply: typeof import('~icons/uil/multiply')['default']

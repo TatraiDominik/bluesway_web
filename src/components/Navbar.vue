@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 
-const route = useRoute();
+const route = useRoute()
 
 interface NavLink {
   name: string

@@ -33,7 +33,7 @@ const navLinks = ref<NavLink[]>([
 
 const emit = defineEmits<{
   'update:opened': [value: boolean]
-}>();
+}>()
 
 const route = useRoute()
 const isOpened = ref(false)
@@ -62,8 +62,14 @@ onMounted(() => {
     <span class="text-xl">Menü</span>
   </div>
 
-  <section v-else class="flex flex-col justify-end content-start items-end p-4 gap-4 bg-zinc-900 w-full">
-    <div @click="setOpened(false)" class="flex flex-row justify-center content-center items-center p-2 gap-2 text-zinc-300 border-2 border-zinc-300">
+  <section
+    v-else
+    class="flex flex-col justify-end content-start items-end p-4 gap-4 bg-zinc-900 w-full"
+  >
+    <div
+      @click="setOpened(false)"
+      class="flex flex-row justify-center content-center items-center p-2 gap-2 text-zinc-300 border-2 border-zinc-300"
+    >
       <i-uil-multiply class="text-2xl"></i-uil-multiply>
       <span class="text-xl">Menü bezárása</span>
     </div>
@@ -75,7 +81,7 @@ onMounted(() => {
         :to="navLink.path"
         class="flex flex-col justify-start content-start items-start border-b-2 border-zinc-100 py-4 w-full text-zinc-100 text-2xl font-normal"
       >
-      {{ navLink.name }}
+        {{ navLink.name }}
       </RouterLink>
     </div>
   </section>
