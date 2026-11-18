@@ -1,13 +1,49 @@
 <script setup lang="ts">
 import lightEllipse from '@/assets/svg/lightEllipse.svg?raw';
 import darkEllipse from '@/assets/svg/darkEllipse.svg?raw';
+import bgDecoration from '@/assets/svg/bgDecoration.svg?raw';
+import { ref } from 'vue';
+
+interface bandMember{
+  name:string,
+  nickname:string,
+  role: string,
+  introduction: string,
+}
+
+const bandMembers = ref<bandMember[]>([
+  {
+    name:"Makaji Timotej",
+    nickname: "Timo",
+    role: "ének, gitár",
+    introduction:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime itaque ad magni, natus obcaecati nihil optio veritatis veniam saepe sequi. Aperiam dolore amet iure perspiciatis corrupti veniam debitis! In?"
+  },
+  {
+    name:"Péter Barnabás",
+    nickname: "Barni",
+    role: "Basszusgitár",
+    introduction:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime itaque ad magni, natus obcaecati nihil optio veritatis veniam saepe sequi. Aperiam dolore amet iure perspiciatis corrupti veniam debitis! In?"
+  },
+  {
+    name:"Szöllősi Gábor",
+    nickname: "Gabi",
+    role: "dob",
+    introduction:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime itaque ad magni, natus obcaecati nihil optio veritatis veniam saepe sequi. Aperiam dolore amet iure perspiciatis corrupti veniam debitis! In?"
+  },
+  {
+    name:"Tátrai Dominik Oszkár",
+    nickname: "Domi",
+    role: "Gitár",
+    introduction:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime itaque ad magni, natus obcaecati nihil optio veritatis veniam saepe sequi. Aperiam dolore amet iure perspiciatis corrupti veniam debitis! In?"
+  }
+]);
 </script>
 
 <template>
-  <main class="w-full flex flex-col justify-center content-center items-center">
+  <main class="w-full h-screen overflow-y-scroll overflow-x-auto snap-y snap-mandatory">
 
     <!--Top section-->
-    <section class="w-full h-screen bg-[url('@/assets/img/mainBg.JPG')] bg-cover bg-center overflow-hidden">
+    <section class="w-full h-screen bg-[url('@/assets/img/mainBg.JPG')] bg-cover bg-center overflow-hidden snap-center">
       <div
         class="w-full h-full flex flex-col justify-center content-center items-center bg-linear-to-t from-zinc-900 to-zinc-900/0 gap-8 relative"
       >
@@ -33,5 +69,30 @@ import darkEllipse from '@/assets/svg/darkEllipse.svg?raw';
       </div>
     </section>
 
+    <!--Band members-->
+    <section v-for="bandMember in bandMembers" :key="bandMember.nickname" class="w-full h-screen flex flex-row justify-center content-center items-center overflow-hidden snap-center relative">
+
+      <div class="w-1/2 h-full flex flex-col justify-center content-start items-start p-16 gap-8 z-2">
+
+        <!--Name-->
+        <h1 class="text-8xl font-bold uppercase text-zinc-900">{{bandMember.name}}</h1>
+        <h2 class="text-5xl font-bold text-zinc-800">({{ bandMember.nickname }})</h2>
+        <!--Separator-->
+        <span class="w-full h-1 bg-linear-to-r from-zinc-900 to-zinc-50"/>
+        <h3 class="text-7xl font-bold uppercase text-zinc-600">{{bandMember.role}}</h3>
+        <!--Separator-->
+        <span class="w-full h-1 bg-linear-to-r from-zinc-900 to-zinc-50"/>
+        <h4 class="text-3xl font-bold text-zinc-900">Bemutatkozás</h4>
+        <p class="text-2xl font-normal text-zinc-900">{{bandMember.introduction}}</p>
+      </div>
+
+      <img :src="`../src/assets/img/members/${bandMember.nickname}.jpg`" :alt="bandMember.nickname" class="w-1/2 h-full object-cover object-center z-2">
+
+      <!--bgDecoration-->
+      <div v-html="bgDecoration" class="absolute left-0 h-screen z-1"/>
+      <!--Ellipses-->
+      <div v-html="darkEllipse" class="absolute -left-25 -top-75 h-125 z-1"/>
+      <div v-html="darkEllipse" class="absolute -left-75 -bottom-80 h-125 z-1"/>
+    </section>
   </main>
 </template>
