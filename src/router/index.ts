@@ -31,7 +31,7 @@ export const router = createRouter({
     {
       path: '/kapcsolatok',
       name: 'Kapcslatok',
-      component: Landing,
+      component: Contacts,
     },
   ],
 })
