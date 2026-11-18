@@ -11,6 +11,8 @@ import Button from '@/components/Button.vue';
 
             <h1 class="uppercase font-bold text-[150px] bg-[url('@/assets/img/contacts/mask1.jpg')] bg-clip-text text-transparent bg-cover bg-center z-10 leading-37">Kapcsolatok</h1>
 
+            <h2 class="text-2xl font-bold uppercase text-zinc-900 z-10">LÉPJ KAPCSOLATBA A blues way EGYÜTTESSEL</h2>
+
             <div class="flex flex-row justify-center content-center items-center gap-16 z-10 ">
                 <Button isDark text="makajitimotej@gmail.com"></Button>
                 <Button isDark text="+36 (20) 775 9055"></Button>
