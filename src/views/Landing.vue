@@ -89,7 +89,10 @@ const bandMembers = ref<bandMember[]>([
       <img :src="`../src/assets/img/members/${bandMember.nickname}.jpg`" :alt="bandMember.nickname" class="w-1/2 h-full object-cover object-center z-2">
 
       <!--bgDecoration-->
-      <div v-html="bgDecoration" class="absolute left-0 h-screen z-1"/>
+      <div
+        v-html="bgDecoration"
+        class="absolute left-0 bottom-0 h-[105%] w-max z-1 [&>svg]:h-full [&>svg]:w-auto [&>svg]:max-w-none"
+      />
       <!--Ellipses-->
       <div v-html="darkEllipse" class="absolute -left-25 -top-75 h-125 z-1"/>
       <div v-html="darkEllipse" class="absolute -left-75 -bottom-80 h-125 z-1"/>
