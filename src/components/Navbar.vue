@@ -44,7 +44,7 @@ const navLinks = ref<NavLink[]>([
       :to="navLink.path"
       class="flex justify-center content-center items-center p-4 border-2 border-zinc-100 text-xl font-normal w-50"
       :class="
-        route.path === navLink.path ? 'bg-zinc-100 text-zinc-900 ' : 'bg-zinc-900 text-zinc-200'
+        route.path === navLink.path ? 'bg-zinc-200 text-zinc-900 ' : 'bg-zinc-900 text-zinc-200'
       "
     >
       {{ navLink.name }}
